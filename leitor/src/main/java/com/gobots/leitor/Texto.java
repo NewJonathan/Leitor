@@ -1,23 +1,12 @@
 package com.gobots.leitor;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
-@Entity
+/** Criação da classe texto que têm como parâmetro uma string.*/
 public class Texto {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
 
     String texto;
     
 
-
-    public void setId(Integer id){
-        this.id = id;
-    }
-
+/** Método que recebe como parâmetro uma string, onde se é verificada a existencia de uma abreviação já deifinida na lista e caso exista a substitui pela palavra completa. E encerra definindo o parâmetro texto.*/
     public void setTexto(String texto){
         
         String termo;
@@ -66,13 +55,9 @@ public class Texto {
         this.texto = texto;
         }
     }
-
+/** Método que retorna o valor do parâmetro texto. */
     public String getTexto(){
         return this.texto;  
-    }
-
-    public Integer getId(){
-        return this.id;
     }
 
 }

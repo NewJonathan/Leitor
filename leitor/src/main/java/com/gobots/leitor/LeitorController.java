@@ -1,6 +1,5 @@
 package com.gobots.leitor;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,18 +9,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class LeitorController {
     
-    @Autowired
-    private TextoRepository textoRepository;
       
-
-
-
-
+/**Define um endpoint /leitor que chama a tela com o formulário. */
     @GetMapping("/leitor")
     public String leitor(){
       return "leitor";
     }
-    
+/**Define um endpoint "/resultado" a ser chamado após o envio do formulário
+ *  e cria um objeto com o conteudo do formulário. Por fim retorna uma página html com o conteudo do objeto criado. */
     @PostMapping(path="/resultado") // Map ONLY POST Requests
     public @ResponseBody String addNewTexto (
          @RequestParam String texto
@@ -31,7 +26,7 @@ public class LeitorController {
 
             u.setTexto(texto);
 
-            textoRepository.save(u);
+            
             
             return             
             "<head>"+
@@ -74,7 +69,7 @@ public class LeitorController {
             "</div>"+
 
             "<script type=\"text/javascript\">"+
-                "var msg = new SpeechSynthesisUtterance(\"" + u.getTexto() + "\");"+
+                "var msg = new SpeechSynthesisUtterance(\"Resultado da sua Conversão:   " + u.getTexto() + "\");"+
                 "window.speechSynthesis.speak(msg);"+
 
             "</script>"+
@@ -86,3 +81,5 @@ public class LeitorController {
             ;
     }
 }
+
+

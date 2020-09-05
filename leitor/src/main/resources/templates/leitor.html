@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-
+<!-- Definição do titulo e linkando os arquivos necessários para carregamento da página. -->
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -10,16 +10,17 @@
     <title>Leitor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
+<!-- Definição em linha do background do body. -->
 <body style="background-color:white;">
 
-
+<!-- Linha de Menu com link para o site da GoBots. -->
 <div class="row menu">
     <div class="col-sm ">
         <p style="margin-top: 7.5px;text-align: right;margin-right: 7.5px;"><a style="color: white;" href="https://gobots.ai/">GoBots</a></p>
     </div>
 </div>
 
+<!-- Linha com duas colunas de tamanho ajustavel uma com a imagem e a outra com o formulario. -->
 
 <div class="row">
 
@@ -40,11 +41,16 @@
 
 </div>
 
+<!-- API responsável pela conversão do texto em voz. -->
+
 <script type="text/javascript">
-    var msg = new SpeechSynthesisUtterance("Formulário de Conversão de texto em voz");
+    var msg = new SpeechSynthesisUtterance("Conversor de texto em voz");
     window.speechSynthesis.speak(msg);
 
 </script>
+
+<!-- Scripts a serem usados na estruturação da página. -->
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
