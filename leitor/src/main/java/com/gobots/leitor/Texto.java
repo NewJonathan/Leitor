@@ -12,7 +12,7 @@ public class Texto {
         String termo;
         int i;
         String palavras[] = {"Vcs", "vc", "vcs", "obg","Obg","td","Td","bm","Bm"
-        ,"qto","Qto","qdo","Qdo","q ","Q ","eh ","Eh ","Qt","qt","aq ","Aq ","aq?","Cst","cst"};
+        ,"qto","Qto","qdo","Qdo","q ","Q ","eh ","Eh ","Qt","qt","aq ","Aq ","aq?","Cst","cst","tb","Tb"};
     
 
         int n = palavras.length;
@@ -50,6 +50,9 @@ public class Texto {
             }
             if (termo == "cst" || termo == "Cst"){
                 texto = texto.replace(termo,"custa");
+            }
+            if (termo == "tb" || termo == "Tb"){
+                texto = texto.replace(termo,"também");
             }
 
         this.texto = texto;
