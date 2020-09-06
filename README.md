@@ -11,4 +11,4 @@ git clone https://github.com/NewJonathan/Leitor.git
 
 O projeto pode ser usado como modelo para a criação de uma função de acessibilidade em chats online, onde pode futuramente ser alterado também para receber a mensagem do formulario como audio também podendo ser ou não convertida em texto para futuros processos.
 
-A fim de testá-lo deve-se acessar a endpoint /leitor após executá-lo. E configurar uma database na application.properties.
+A fim de testá-lo deve-se acessar a endpoint /leitor após executá-lo.
